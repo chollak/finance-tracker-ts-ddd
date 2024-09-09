@@ -1,7 +1,7 @@
 // src/repositories/RepositoryFactory.ts
-import { IUserRepository } from './IUserRepository';
 import { NotionUserRepository } from './NotionUserRepository';
 import { FileUserRepository } from './FileUserRepository';
+import { IUserRepository } from '../../domain/contracts/IUserRepository';
 
 export class RepositoryFactory {
     static createUserRepository(type: 'notion' | 'file'): IUserRepository {

@@ -1,4 +1,4 @@
-import { Budget } from '../domain/Budget';
+import { Budget } from '../Budget';
 
 export interface IBudgetRepository {
     find(id: string): Budget | null;

@@ -1,5 +1,5 @@
-import { IAccountRepository } from './IAccountRepository';
-import { Account } from '../domain/Account';
+import { Account } from '../../domain/Account';
+import { IAccountRepository } from '../../domain/contracts/IAccountRepository';
 
 export class AccountRepository implements IAccountRepository {
     private accounts: Account[] = [];

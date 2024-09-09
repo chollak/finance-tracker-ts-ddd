@@ -21,4 +21,9 @@ export class Account {
         }
         this.balance -= amount;
     }
+
+    getBalance(): number {
+        throw new Error('Method not implemented.');
+    }
+
 }

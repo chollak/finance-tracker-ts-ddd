@@ -1,4 +1,4 @@
-import { RepositoryFactory } from './repositories/RepositoryFactory';
+import { RepositoryFactory } from './infrastructure/repositories/RepositoryFactory';
 import { UserService } from './services/UserService';
 import { AccountService } from './services/AccountService';
 import { BudgetService } from './services/BudgetService';

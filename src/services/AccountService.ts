@@ -1,9 +1,10 @@
 // src/services/AccountService.ts
 
 import { Account } from '../domain/Account';
-import { AccountRepository } from '../repositories/AccountRepository';
+import { AccountRepository } from '../infrastructure/repositories/AccountRepository';
 
 export class AccountService {
+    userService: any;
     constructor(private accountRepository: AccountRepository) { }
 
     public createAccount(name: string, balance: number, currency: string): Account {
@@ -13,8 +14,8 @@ export class AccountService {
     }
 
     public getAccountBalance(accountId: string): number {
-        const account = this.accountRepository.findById(accountId);
-        return account.getBalance();
+        const account = this.accountRepository.find(accountId);
+        return account ? account.getBalance() : 0;
     }
 
     private generateId(): string {

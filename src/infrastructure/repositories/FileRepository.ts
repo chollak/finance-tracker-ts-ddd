@@ -1,7 +1,7 @@
-import { IUserRepository } from './IUserRepository';
-import { User } from '../domain/User';
+import { User } from '../../domain/User';
 import fs from 'fs';
 import path from 'path';
+import { IUserRepository } from '../../domain/contracts/IUserRepository';
 
 export class FileRepository implements IUserRepository {
     private readonly filePath = path.resolve(__dirname, '../../data/users.json');

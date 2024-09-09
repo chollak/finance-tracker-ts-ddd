@@ -1,5 +1,5 @@
-import { IUserRepository } from './IUserRepository';
-import { User } from '../domain/User';
+import { User } from '../../domain/User';
+import { IUserRepository } from '../../domain/contracts/IUserRepository';
 
 export class NotionUserRepository implements IUserRepository {
     async getUserById(id: string): Promise<User | null> {

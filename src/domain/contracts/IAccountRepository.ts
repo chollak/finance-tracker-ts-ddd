@@ -1,4 +1,4 @@
-import { Account } from '../domain/Account';
+import { Account } from '../Account';
 
 export interface IAccountRepository {
     find(id: string): Account | null;
