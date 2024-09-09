@@ -21,7 +21,7 @@ export class TransactionService {
             throw new Error('Account not found');
         }
 
-        const transaction = new Transaction(transactionId, amount, category, account, categoryId);
+        const transaction = new Transaction(transactionId, amount, category, account.id, "Some description", new Date());
         account.debit(amount);
         this.accountService.userService.userRepo.update(userId, user);
         return transaction;
